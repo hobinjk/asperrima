@@ -1,0 +1,8 @@
+div.menubar {
+    border-radius: 10px;
+    float:left;
+    background-color: #edf;
+    padding: 10px;
+    border: 2px solid black;
+    margin-right: 20px;
+}

@@ -1,0 +1,45 @@
+<h2>So you want to learn Python?</h2>
+<h3>A result oriented approach.</h3>
+<br/>
+<p style="font-size:smaller;">Note: This tutorial assumes you know a language like Java, C, or C++, and want to pick up the extremely easy python, but don't know how to use it to streamline your programming. If you don't know a language, check out <a href="http://python.org">python.org</a> for a more suitable tutorial.</p>
+<h3>Why Python?</h3>
+<p>One word: lists. While C and Java have ridiculous amounts of speed and power, what they lack are the list functions of python. For this project, lists are used throughout but performance isn't a consideration, making it a perfect candidate for python.</p>
+
+<br/>
+<h3>Starters</h3>
+<p>The problem we're going to work on is creating a program that will automatically type in all of the words that can be made from a set of letters, a la Scrabble. Incidentally, this happens to be a way to win in the online game Letterblox.</p>
+<p>The code starts off with simple instantiation, showing off python's lack of typing and easy array/dictionary creation.</p>
+<pre class="prettyprint lang-py">
+numletters = 6 #yay no type
+allwords = [] #yay array
+dictionary = {} #yay dictionary/hashmap (not used for this example, but still cool)
+</pre>
+<br/>
+<h3>Moving on</h3>
+<p>Next we want a source for our words. In any other language this would be at 4-10 lines. In python it is:</p>
+<pre class="prettyprint lang-py">
+dictfile = open('wordlist.txt', 'r')
+for word in dictfile:
+</pre>
+<p>This is the power of list based programming.</p>
+<br/>
+<h3>Logic!</h3>
+<p>Now that we have a word, we need to see if we can make it. For this, we create a new list that is a copy of our letters, and remove from it until we either can't find a letter or have successfully found every letter for our word. In python, this looks like:</p>
+<pre class="prettyprint lang-py">
+#word already set
+cur_lets = list(letters) #make a list!
+found = True  #boolean
+for letter in word: #yes, this actually works
+    if letter not in cur_lets: #not found (magic)
+        found = False
+        break
+    idx = cur_lets.index(letter)
+    del cur_lets[idx] #remove the letter for now
+if found:
+    allwords.append(word) #keeping track of it
+</pre>
+<p>And there you have it! You can find the finished program <a href="/files/block.zip">here.</a></p>
+<p>The following is a short video demonstrating this program I made back when I was a Sophomore--it's a bit overly dramatic.</p>
+<div style="text-align: center;">
+<iframe width="420" height="315" src="http://www.youtube.com/embed/lxKNohfCSG0" frameborder="0" allowfullscreen></iframe>
+</div>

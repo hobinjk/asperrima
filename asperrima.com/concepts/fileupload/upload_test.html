@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <script src="/jquery.js" type="text/javascript"></script>
+    <script src="fileuploader.js" type="text/javascript"></script>
+    <script src="jszip/jszip.js"></script>
+    <link rel="stylesheet" href="fileuploader.css"></link>
+    <link rel="stylesheet" href="style.css"></link>
+    <script src="upload.js" type="text/javascript"></script>
+    
+</head>
+<body>
+    <div class="menubar">
+        <form id="options">
+            Threshold: <input type="text" name="threshold" id="threshold"/><br/>
+            Mode: <select name="mode" id="mode">
+                <option value="hue">Hue</option>
+                <option value="sat">Sat</option>
+                <option value="value">Value</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+            </select><br/>
+            Binary: <input id="binary" type="checkbox"/><br/>
+        </form>
+    <div id="file-upload">
+    </div>
+    <div class="qq-upload-button" id="download">Download STL</div>
+    <div id="downloadlink"></div>
+    </div>
+    <canvas id="stlDraw" width="0" height="0"></canvas>
+</body>
+</html>
+
+
+

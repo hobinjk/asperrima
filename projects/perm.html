@@ -1,0 +1,28 @@
+<html>
+<h4>Perm</h4>
+<p>Perm is currently an AES-256 encryption breaker. It uses a brute force dictionary attack with a twist. Instead of just running through lowercase or uppercase words, it also checks the l33t-speak permutations. For example, here are some of the permutations of "example":</p>
+<table>
+    <tr>
+        <td>example</td><td>3xample</td><td>ex4mple</td><td>3x4mple</td><td>examp|e</td>
+    </tr>
+    <tr>
+        <td>3xamp|e</td><td>ex4mp|e</td><td>3x4mp|e</td><td>examp1e</td><td>3xamp1e</td>
+    </tr>
+    <tr>
+        <td>ex4mp1e</td><td>3x4mp1e</td><td>examp!e</td><td>3xamp!e</td><td>ex4mp!e</td>
+    </tr>
+    <tr>
+        <td>3x4mp!e</td><td>exampl3</td><td>3xampl3</td><td>ex4mpl3</td><td>3x4mpl3</td>
+    </tr>
+</table>
+<hr/>
+<h4>Why l33tspeak?</h4>
+<p>In this age of password security, simple passwords, like admin, itstaff, or even password are considered secure if some letters are replaced with their l33t equivalents, e.g. adm1n, itst4ff, or p4$$w0rd. However, this program demonstrates that this is not the case. In about 3 minutes on current hardware, Perm is able to run through the l33tspeak and switchcased versions of every word in the English language. The methods of selecting passwords need to be rethought immediately for a more secure digital future.</p>
+<hr/>
+<h4>Installation</h4>
+<p>Download  the <a href="/files/perm.zip">source archive</a>. Install gcc and openssl if you haven't already. Figure out how to change the ciphertext it's working on, and compile with gcc perm.c leet.c -lcrypto. Note: this program is under development and the current posted version may provide false positives.</p>
+<hr/>
+<h4>Acknowledgements</h4>
+<p>I am indebted to <A href="http://saju.net.in/code/misc/openssl_aes.c.txt">http://saju.net.in/code/misc/openssl_aes.c.txt</a> for the basic OpenSSL AES decryption code.</p>
+</html>
+

@@ -1,0 +1,1 @@
+new Physics("physics-canvas");
